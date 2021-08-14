@@ -19,9 +19,11 @@
     "xlsx",
     "xlsb",
     "xlsm",
-    "spreadsheet"
+    "spreadsheet",
+    "react-excel-downloader",
+    "excel-downloader"
   ],
-  "homepage": "",
+  "homepage": "https://github.com/Bunlong/react-xls",
   "main": "dist/react-xls.js",
   "module": "dist/react-xls.es.js",
   "jsnext:main": "dist/react-xls.es.js",
