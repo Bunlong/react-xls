@@ -1,6 +1,6 @@
 {
   "name": "react-xls",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "react-xls is the fastest in-browser excel ( .xls & .xlsx ) parser for React.",
   "author": "Bunlong <bunlong.van@gmail.com>",
   "license": "MIT",
@@ -86,5 +86,8 @@
   },
   "browser": {
     "fs": false
+  },
+  "dependencies": {
+    "xlsx": "^0.17.0"
   }
 }

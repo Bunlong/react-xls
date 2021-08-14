@@ -1,1 +1,1 @@
-export { useXLS } from './useXLS';
+export { useExcelDownloder } from './useExcelDownloder';
