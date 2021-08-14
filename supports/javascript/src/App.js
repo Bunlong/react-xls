@@ -2,7 +2,7 @@ import React from 'react';
 import { useExcelDownloder } from 'react-xls';
 
 function App() {
-  const { ExcelDownloder, setData } = useExcelDownloder();
+  const { ExcelDownloder, setData, types } = useExcelDownloder();
 
   // We will make a Workbook contains 2 Worksheets
   const data = {
@@ -21,6 +21,7 @@ function App() {
   };
 
   const setMyData = () => {
+    // We will make a Workbook contains 2 Worksheets
     const data = {
       // Worksheet named animals
       animals: [
@@ -36,13 +37,14 @@ function App() {
       ],
     };
     setData(data);
-    alert('Set my data');
-  }
+  };
 
   return (
     <div>
       <ExcelDownloder
         data={data}
+        filename={'book'}
+        type={types.link}
       >
         Downloader
       </ExcelDownloder>
