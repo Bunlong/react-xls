@@ -24,7 +24,7 @@ yarn add react-xls --save
 
 ## 📚 Useful Features
 
-* [useExcelDownloader](https://github.com/bunlong/react-xls#-useexceldownloader) – React hook that render the link/button which is clicked to download the data provided as excel file.
+* [useExcelDownloader](https://github.com/bunlong/react-xls#-useexceldownloader) – React hook that render the link/button which is clicked to download the data provided in excel file.
 
 ## 💡 Usage
 
