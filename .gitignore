@@ -23,3 +23,5 @@ package-lock.json
 
 /supports/javascript/node_modules
 /supports/javascript/package-lock.json
+/supports/create-react-app/node_modules
+/supports/create-react-app/package-lock.json
