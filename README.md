@@ -103,7 +103,7 @@ function App() {
       <ExcelDownloder
         data={data}
         filename={'book'}
-        type={Type.link} // or type={'link'}
+        type={Type.Link} // or type={'link'}
       >
         Download
       </ExcelDownloder>
