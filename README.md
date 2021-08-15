@@ -114,6 +114,14 @@ function App() {
 export default App;
 ```
 
+## 📜 Changelog
+
+Latest version 0.1.0 (2021-08-15):
+
+  * Add useExcelDownloader
+
+Details changes for each release are documented in the [CHANGELOG.md](https://github.com/Bunlong/react-xls/blob/master/CHANGELOG.md).
+
 ## ❗ Issues
 
 If you think any of the `react-xls` can be improved, please do open a PR with any updates and submit any issues. Also, I will continue to improve this, so you might want to watch/star this repository to revisit.
