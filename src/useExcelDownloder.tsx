@@ -1,9 +1,9 @@
 import React from 'react';
 import XLSX from 'xlsx';
 
-const types = {
-  link: 'link',
-  button: 'button',
+const Type = {
+  Link: 'link',
+  Button: 'button',
 } as const; 
 
 export interface Api {
@@ -69,7 +69,7 @@ function useExcelDownloderComponent(api: Api) {
 
       return (
         <>
-          {type === types.button ? (
+          {type === Type.Button ? (
             <button
               onClick={() => download()}
               style={style}
@@ -100,7 +100,7 @@ function useExcelDownloderComponent(api: Api) {
 export function useExcelDownloder() {
   const [data, setData] = React.useState({});
   const [filename, setFilename] = React.useState({});
-  const [type, setType] = React.useState(types.link);
+  const [type, setType] = React.useState(Type.Link);
   const [style, setStyle] = React.useState({});
   const [className, setClassName] = React.useState('');
   const api = {
@@ -121,6 +121,6 @@ export function useExcelDownloder() {
   return {
     ...api,
     ExcelDownloder,
-    types,
+    Type,
   };
 }

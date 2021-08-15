@@ -8,6 +8,10 @@ react-xls is the fastest in-browser excel ( .xls & .xlsx ) parser for React.
 
 * Compatible with both JavaScript and TypeScript
 
+## 📚 Useful Features
+
+* [useExcelDownloader](https://github.com/bunlong/react-xls#-useexceldownloader) – React hook that render the link/button which is clicked to download the data provided in excel file.
+
 ## 🔧 Install
 
 react-xls is available on npm. It can be installed with the following command:
@@ -22,10 +26,6 @@ react-xls is available on yarn as well. It can be installed with the following c
 yarn add react-xls --save
 ```
 
-## 📚 Useful Features
-
-* [useExcelDownloader](https://github.com/bunlong/react-xls#-useexceldownloader) – React hook that render the link/button which is clicked to download the data provided in excel file.
-
 ## 💡 Usage
 
 ### 🎀 useExcelDownloader
@@ -33,12 +33,85 @@ yarn add react-xls --save
 #### Button
 
 ```js
+import React from 'react';
+
+import { useExcelDownloder } from 'react-xls';
+
+function App() {
+  const { ExcelDownloder, Type } = useExcelDownloder();
+
+  // We will make a Workbook contains 2 Worksheets
+  const data = {
+    // Worksheet named animals
+    animals: [
+      { name: 'cat', category: 'animal' },
+      { name: 'dog', category: 'animal' },
+      { name: 'pig', category: 'animal' },
+    ],
+    // Worksheet named pokemons
+    pokemons: [
+      { name: 'pikachu', category: 'pokemon' },
+      { name: 'Arbok', category: 'pokemon' },
+      { name: 'Eevee', category: 'pokemon' },
+    ],
+  };
+
+  return (
+    <div>
+      <ExcelDownloder
+        data={data}
+        filename={'book'}
+        type={Type.Button} // or type={'button'}
+      >
+        Download
+      </ExcelDownloder>
+    </div>
+  );
+}
+
+export default App;
 ```
 
 #### Link
 
 ```js
+import React from 'react';
 
+import { useExcelDownloder } from 'react-xls';
+
+function App() {
+  const { ExcelDownloder, Type } = useExcelDownloder();
+
+  // We will make a Workbook contains 2 Worksheets
+  const data = {
+    // Worksheet named animals
+    animals: [
+      { name: 'cat', category: 'animal' },
+      { name: 'dog', category: 'animal' },
+      { name: 'pig', category: 'animal' },
+    ],
+    // Worksheet named pokemons
+    pokemons: [
+      { name: 'pikachu', category: 'pokemon' },
+      { name: 'Arbok', category: 'pokemon' },
+      { name: 'Eevee', category: 'pokemon' },
+    ],
+  };
+
+  return (
+    <div>
+      <ExcelDownloder
+        data={data}
+        filename={'book'}
+        type={Type.link} // or type={'link'}
+      >
+        Download
+      </ExcelDownloder>
+    </div>
+  );
+}
+
+export default App;
 ```
 
 ## ❗ Issues
