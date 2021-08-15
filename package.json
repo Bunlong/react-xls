@@ -36,7 +36,7 @@
   "scripts": {
     "build": "rollup -c",
     "@comment prettier": "prettier --write './src/*.ts' './src/*.tsx' --config ./.prettierrc",
-    "prettier": "prettier --write './src/*.ts' './src/utils/*.ts' --config ./.prettierrc",
+    "prettier": "prettier --write './src/*.ts' './src/*.tsx' --config ./.prettierrc",
     "lint:check": "eslint ./src --ext .tsx,.ts --report-unused-disable-directives",
     "bundlesize": "npm run build && bundlesize",
     "dev": "rollup -c -w",
@@ -78,8 +78,12 @@
   ],
   "bundlesize": [
     {
-      "path": "./dist/react-xls.es.js",
-      "maxSize": "50 kB"
+      "path": "./dist/*.js",
+      "maxSize": "500 kB"
+    },
+    {
+      "path": "./dist/*.ts",
+      "maxSize": "500 kB"
     }
   ],
   "peerDependencies": {

@@ -4,7 +4,7 @@ import XLSX from 'xlsx';
 const Type = {
   Link: 'link',
   Button: 'button',
-} as const; 
+} as const;
 
 export interface Api {
   data: any;
@@ -29,67 +29,67 @@ export interface Props {
 }
 
 function useExcelDownloderComponent(api: Api) {
+  const ExcelDownloderComponent = (props: Props) => {
+    const {
+      setData,
+      data,
+      setFilename,
+      filename,
+      setType,
+      type,
+      setStyle,
+      style,
+      className,
+      setClassName,
+    } = ExcelDownloder.api;
+
+    React.useEffect(() => {
+      setData(props.data);
+      setFilename(props.filename);
+      props.type && setType(props.type);
+      props.style && setStyle(props.style);
+      props.className && setClassName(props.className);
+      // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
+
+    const download = () => {
+      // Make Workbook of excel
+      const wb = XLSX.utils.book_new();
+
+      for (const key in data) {
+        // Export json to Worksheet of Excel ( only array possible )
+        const jsonToSheet = XLSX.utils.json_to_sheet(data[key]);
+        // Add Worksheet to Workbook ( workbook contains one or more worksheets )
+        XLSX.utils.book_append_sheet(wb, jsonToSheet, key);
+      }
+
+      // Export excel file
+      XLSX.writeFile(wb, `${filename}.xlsx`);
+    };
+
+    return (
+      <>
+        {type === Type.Button ? (
+          <button
+            onClick={() => download()}
+            style={style}
+            className={className}
+          >
+            {props.children}
+          </button>
+        ) : (
+          <a onClick={() => download()} style={style} className={className}>
+            {props.children}
+          </a>
+        )}
+      </>
+    );
+  };
+
   const ExcelDownloder = React.useMemo(
-    () => (props: Props) => {
-      const {
-        setData,
-        data,
-        setFilename,
-        filename,
-        setType,
-        type,
-        setStyle,
-        style,
-        className,
-        setClassName,
-      } = ExcelDownloder.api;
-
-      React.useEffect(() => {
-        setData(props.data);
-        setFilename(props.filename);
-        props.type && setType(props.type);
-        props.style && setStyle(props.style);
-        props.className && setClassName(props.className);
-      }, []);
-
-      const download = () => {
-        // Make Workbook of excel
-        let wb = XLSX.utils.book_new();
-
-        for (const key in data) {
-          // Export json to Worksheet of Excel ( only array possible )
-          let jsonToSheet = XLSX.utils.json_to_sheet(data[key]);
-          // Add Worksheet to Workbook ( workbook contains one or more worksheets )
-          XLSX.utils.book_append_sheet(wb, jsonToSheet, key);
-        }
-
-        // Export excel file
-        XLSX.writeFile(wb, `${filename}.xlsx`);
-      };
-
-      return (
-        <>
-          {type === Type.Button ? (
-            <button
-              onClick={() => download()}
-              style={style}
-              className={className}
-            >
-              {props.children}
-            </button>
-          ) : (
-            <a
-              onClick={() => download()}
-              style={style}
-              className={className}
-            >
-              {props.children}
-            </a>
-          )}
-        </>
-      );
-    },
-    []
+    () => ExcelDownloderComponent,
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [],
   ) as any;
 
   ExcelDownloder.api = api;
