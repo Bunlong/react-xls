@@ -2,7 +2,7 @@
 
 react-xls is the fastest in-browser excel ( .xls & .xlsx ) parser for React.
 
-[![NPM](https://img.shields.io/npm/v/react-xls.svg)](https://www.npmjs.com/package/react-xls) ![npm bundle size](https://img.shields.io/bundlephobia/min/react-xls) [![Build Status](https://api.travis-ci.com/Bunlong/react-xls.svg?branch=master)](https://travis-ci.com/Bunlong/react-xls) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![NPM](https://img.shields.io/npm/v/react-xls.svg)](https://www.npmjs.com/package/react-xls) ![npm bundle size](https://img.shields.io/bundlephobia/min/react-xls) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 ## 🎁 Features
 
