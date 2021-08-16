@@ -1,6 +1,6 @@
 {
   "name": "react-xls",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "react-xls is the fastest in-browser excel ( .xls & .xlsx ) parser for React. It is full of useful features such as useExcelDownloader, ... etc.",
   "author": "Bunlong <bunlong.van@gmail.com>",
   "license": "MIT",
@@ -40,7 +40,7 @@
     "lint:check": "eslint ./src --ext .tsx,.ts --report-unused-disable-directives",
     "bundlesize": "npm run build && bundlesize",
     "dev": "rollup -c -w",
-    "test": "jest --runInBand",
+    "@test": "jest --runInBand",
     "prepare": "npm run build",
     "predeploy": "cd docs && npm install && npm run build",
     "deploy": "gh-pages -d docs/build"

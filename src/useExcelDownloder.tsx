@@ -44,11 +44,12 @@ function useExcelDownloderComponent(api: Api) {
     } = ExcelDownloder.api;
 
     React.useEffect(() => {
-      setData(props.data);
-      setFilename(props.filename);
-      props.type && setType(props.type);
-      props.style && setStyle(props.style);
-      props.className && setClassName(props.className);
+      const { data, filename, type, style, className } = props;
+      setData(data);
+      setFilename(filename);
+      type && setType(type);
+      style && setStyle(style);
+      className && setClassName(className);
       // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
