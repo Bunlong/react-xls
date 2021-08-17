@@ -30,7 +30,7 @@ yarn add react-xls --save
 
 ### 🎀 useExcelDownloader
 
-#### Button
+#### 👨‍💻 Button
 
 ```js
 import React from 'react';
@@ -72,7 +72,7 @@ function App() {
 export default App;
 ```
 
-#### Link
+#### 👨‍💻 Link
 
 ```js
 import React from 'react';
@@ -113,6 +113,28 @@ function App() {
 
 export default App;
 ```
+
+#### 📖 useExcelDownloder Returned Object
+
+| Object Properties | Description |
+| :--- | :--- |
+| ExcelDownloder | React component that render the link/button which is clicked to download the data provided in excel file. |
+| Type | Constant object ( `Type.Line` && `Type.Button` ). |
+| setData | Method that use to set data. |
+| setFilename | Method that use to set filename. |
+| setStyle | Method that use to set style. |
+| setClassName | Method that use to set className. |
+
+#### 📖 ExcelDownloder props
+
+| Props | Type | Default | Description | Required |
+| :--- | :--- | :--- | :--- | :--- |
+| children | node |  | React component, HTML element or string. | ✅ |
+| data | object |  | Downloaded data. | ✅ |
+| filename | string |  | Filename ( `.xlsx` extension is automatically added ). | ✅ |
+| type | string | 'link' |  If 'button', render button. | ❌ |
+| style | object | {} | Inline style. | ❌ |
+| className | string | '' | className | ❌ |
 
 ## 📜 Changelog
 
