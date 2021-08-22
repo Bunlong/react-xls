@@ -1,5 +1,3 @@
-import React from 'react';
-
 import { useExcelDownloder } from 'react-xls';
 
 function App() {

@@ -11,18 +11,7 @@
   "bugs": {
     "url": "https://github.com/Bunlong/react-xls.git/issues"
   },
-  "keywords": [
-    "react",
-    "react-xls",
-    "excel",
-    "xls",
-    "xlsx",
-    "xlsb",
-    "xlsm",
-    "spreadsheet",
-    "react-excel-downloader",
-    "excel-downloader"
-  ],
+  "keywords": [],
   "homepage": "https://github.com/Bunlong/react-xls",
   "main": "dist/react-xls.js",
   "module": "dist/react-xls.es.js",
@@ -34,13 +23,12 @@
     "npm": ">=5"
   },
   "scripts": {
+    "@test": "jest --runInBand",
     "build": "rollup -c",
-    "@comment prettier": "prettier --write './src/*.ts' './src/*.tsx' --config ./.prettierrc",
-    "prettier": "prettier --write './src/*.ts' './src/*.tsx' --config ./.prettierrc",
+    "prettier": "prettier --write './src/*.ts' './src/*.tsx' './demo/*js' --config ./.prettierrc",
     "lint:check": "eslint ./src --ext .tsx,.ts --report-unused-disable-directives",
     "bundlesize": "npm run build && bundlesize",
     "dev": "rollup -c -w",
-    "@test": "jest --runInBand",
     "prepare": "npm run build",
     "predeploy": "cd docs && npm install && npm run build",
     "deploy": "gh-pages -d docs/build"
@@ -52,26 +40,29 @@
     "@rollup/plugin-babel": "^5.3.0",
     "@rollup/plugin-commonjs": "^20.0.0",
     "@rollup/plugin-node-resolve": "^13.0.4",
-    "@types/react": "^17.0.17",
+    "@types/react": "^17.0.15",
     "@types/react-dom": "^17.0.9",
-    "@typescript-eslint/eslint-plugin": "^4.29.1",
-    "@typescript-eslint/parser": "^4.29.1",
+    "@types/react-test-renderer": "^17.0.1",
+    "@typescript-eslint/eslint-plugin": "^4.29.0",
+    "@typescript-eslint/parser": "^4.29.0",
     "bundlesize": "^0.18.1",
     "eslint": "^7.32.0",
     "eslint-plugin-react": "^7.24.0",
     "eslint-plugin-react-hooks": "^4.2.0",
-    "jest": "^27.0.6",
+    "jest": "^27.0.4",
     "mutationobserver-shim": "^0.3.7",
     "prettier": "^2.3.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "rollup": "^2.56.2",
-    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "react-scripts": "^4.0.3",
+    "react-test-renderer": "^17.0.2",
+    "rollup": "^2.56.0",
     "rollup-plugin-terser": "^7.0.2",
     "rollup-plugin-typescript2": "^0.30.0",
     "ts-jest": "^27.0.4",
-    "tslib": "^2.3.1",
-    "typescript": "^4.3.5"
+    "tslib": "^2.3.0",
+    "typescript": "^4.3.5",
+    "xlsx": "^0.17.1"
   },
   "files": [
     "dist"
@@ -79,21 +70,16 @@
   "bundlesize": [
     {
       "path": "./dist/*.js",
-      "maxSize": "500 kB"
+      "maxSize": "21 kB"
     },
     {
       "path": "./dist/*.ts",
-      "maxSize": "500 kB"
+      "maxSize": "750 B"
     }
   ],
   "peerDependencies": {
     "react": "^17.0.2",
-    "react-dom": "^17.0.2"
-  },
-  "browser": {
-    "fs": false
-  },
-  "dependencies": {
-    "xlsx": "^0.17.0"
+    "react-dom": "^17.0.2",
+    "react-scripts": "^4.0.3"
   }
 }
