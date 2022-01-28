@@ -28,8 +28,8 @@ export interface Props {
   className?: string;
 }
 
-function useExcelDownloderComponent(api: Api) {
-  const ExcelDownloderComponent = (props: Props) => {
+function useExcelDownloaderComponent(api: Api) {
+  const ExcelDownloaderComponent = (props: Props) => {
     const {
       setData,
       data,
@@ -41,7 +41,7 @@ function useExcelDownloderComponent(api: Api) {
       style,
       className,
       setClassName,
-    } = ExcelDownloder.api;
+    } = ExcelDownloader.api;
 
     React.useEffect(() => {
       const { data, filename, type, style, className } = props;
@@ -87,18 +87,18 @@ function useExcelDownloderComponent(api: Api) {
     );
   };
 
-  const ExcelDownloder = React.useMemo(
-    () => ExcelDownloderComponent,
+  const ExcelDownloader = React.useMemo(
+    () => ExcelDownloaderComponent,
     // eslint-disable-next-line react-hooks/exhaustive-deps
     [],
   ) as any;
 
-  ExcelDownloder.api = api;
+  ExcelDownloader.api = api;
 
-  return ExcelDownloder;
+  return ExcelDownloader;
 }
 
-export function useExcelDownloder() {
+export function useExcelDownloader() {
   const [data, setData] = React.useState({});
   const [filename, setFilename] = React.useState({});
   const [type, setType] = React.useState(Type.Link);
@@ -117,11 +117,11 @@ export function useExcelDownloder() {
     setClassName,
   } as Api;
 
-  const ExcelDownloder = useExcelDownloderComponent(api);
+  const ExcelDownloader = useExcelDownloaderComponent(api);
 
   return {
     ...api,
-    ExcelDownloder,
+    ExcelDownloader,
     Type,
   };
 }

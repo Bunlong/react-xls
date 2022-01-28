@@ -35,10 +35,10 @@ yarn add react-xls --save
 ```js
 import React from 'react';
 
-import { useExcelDownloder } from 'react-xls';
+import { useExcelDownloader } from 'react-xls';
 
 function App() {
-  const { ExcelDownloder, Type } = useExcelDownloder();
+  const { ExcelDownloader, Type } = useExcelDownloader();
 
   // We will make a Workbook contains 2 Worksheets
   const data = {
@@ -58,13 +58,13 @@ function App() {
 
   return (
     <div>
-      <ExcelDownloder
+      <ExcelDownloader
         data={data}
         filename={'book'}
         type={Type.Button} // or type={'button'}
       >
         Download
-      </ExcelDownloder>
+      </ExcelDownloader>
     </div>
   );
 }
@@ -77,10 +77,10 @@ export default App;
 ```js
 import React from 'react';
 
-import { useExcelDownloder } from 'react-xls';
+import { useExcelDownloader } from 'react-xls';
 
 function App() {
-  const { ExcelDownloder, Type } = useExcelDownloder();
+  const { ExcelDownloader, Type } = useExcelDownloader();
 
   // We will make a Workbook contains 2 Worksheets
   const data = {
@@ -100,13 +100,13 @@ function App() {
 
   return (
     <div>
-      <ExcelDownloder
+      <ExcelDownloader
         data={data}
         filename={'book'}
         type={Type.Link} // or type={'link'}
       >
         Download
-      </ExcelDownloder>
+      </ExcelDownloader>
     </div>
   );
 }
@@ -114,18 +114,18 @@ function App() {
 export default App;
 ```
 
-#### 📖 useExcelDownloder Returned Object
+#### 📖 useExcelDownloader Returned Object
 
 | Object Properties | Description |
 | :--- | :--- |
-| ExcelDownloder | React component that render the link/button which is clicked to download the data provided in excel file. |
+| ExcelDownloader | React component that render the link/button which is clicked to download the data provided in excel file. |
 | Type | Constant object ( `Type.Line` && `Type.Button` ). |
 | setData | Method that use to set data. |
 | setFilename | Method that use to set filename. |
 | setStyle | Method that use to set style. |
 | setClassName | Method that use to set className. |
 
-#### 📖 ExcelDownloder props
+#### 📖 ExcelDownloader props
 
 | Props | Type | Default | Description | Required |
 | :--- | :--- | :--- | :--- | :--- |
