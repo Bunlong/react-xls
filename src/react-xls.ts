@@ -1,2 +1,2 @@
-export { useExcelDownloder } from './useExcelDownloder';
+export { useExcelDownloader } from './useExcelDownloader';
 export { useSheetTo } from './useSheetTo';
