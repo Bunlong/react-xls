@@ -119,7 +119,7 @@ export default App;
 | Object Properties | Description |
 | :--- | :--- |
 | ExcelDownloder | React component that render the link/button which is clicked to download the data provided in excel file. |
-| Type | Constant object ( `Type.Line` && `Type.Button` ). |
+| Type | Constant object ( `Type.Link` && `Type.Button` ). |
 | setData | Method that use to set data. |
 | setFilename | Method that use to set filename. |
 | setStyle | Method that use to set style. |
