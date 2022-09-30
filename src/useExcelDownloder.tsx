@@ -8,15 +8,15 @@ const Type = {
 
 export interface Api {
   data: any;
-  setData?: (data: any) => void;
+  setData: (data: any) => void;
   filename: string;
-  setFilename?: (filename: string) => void;
+  setFilename: (filename: string) => void;
   type: string;
   setType: (type: string) => void;
-  style?: any;
-  setStyle?: (style: any) => void;
-  className?: any;
-  setClassName?: (className: string) => void;
+  style: any;
+  setStyle: (style: any) => void;
+  className: any;
+  setClassName: (className: string) => void;
 }
 
 export interface Props {
