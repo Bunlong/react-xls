@@ -17,13 +17,13 @@ react-xls is the fastest in-browser excel ( .xls & .xlsx ) parser for React.
 react-xls is available on npm. It can be installed with the following command:
 
 ```
-npm install react-xls --save
+npm install @coinsummer/react-xls --save
 ```
 
 react-xls is available on yarn as well. It can be installed with the following command:
 
 ```
-yarn add react-xls --save
+yarn add @coinsummer/react-xls --save
 ```
 
 ## 💡 Usage
@@ -35,7 +35,7 @@ yarn add react-xls --save
 ```js
 import React from 'react';
 
-import { useExcelDownloder } from 'react-xls';
+import { useExcelDownloder } from '@coinsummer/react-xls';
 
 function App() {
   const { ExcelDownloder, Type } = useExcelDownloder();
@@ -77,7 +77,7 @@ export default App;
 ```js
 import React from 'react';
 
-import { useExcelDownloder } from 'react-xls';
+import { useExcelDownloder } from '@coinsummer/react-xls';
 
 function App() {
   const { ExcelDownloder, Type } = useExcelDownloder();

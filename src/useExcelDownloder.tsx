@@ -8,15 +8,15 @@ const Type = {
 
 export interface Api {
   data: any;
-  setData?: () => void;
+  setData: (data: any) => void;
   filename: string;
-  setFilename?: () => void;
+  setFilename: (filename: string) => void;
   type: string;
-  setType: () => void;
-  style?: any;
-  setStyle?: () => void;
-  className?: any;
-  setClassName?: () => void;
+  setType: (type: string) => void;
+  style: any;
+  setStyle: (style: any) => void;
+  className: any;
+  setClassName: (className: string) => void;
 }
 
 export interface Props {
@@ -100,7 +100,7 @@ function useExcelDownloderComponent(api: Api) {
 
 export function useExcelDownloder() {
   const [data, setData] = React.useState({});
-  const [filename, setFilename] = React.useState({});
+  const [filename, setFilename] = React.useState('');
   const [type, setType] = React.useState(Type.Link);
   const [style, setStyle] = React.useState({});
   const [className, setClassName] = React.useState('');
