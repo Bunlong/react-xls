@@ -1,18 +1,18 @@
 {
-  "name": "react-xls",
+  "name": "@coinsummer/react-xls",
   "version": "0.1.1",
   "description": "react-xls is the fastest in-browser excel ( .xls & .xlsx ) parser for React. It is full of useful features such as useExcelDownloader, ... etc.",
-  "author": "Bunlong <bunlong.van@gmail.com>",
+  "author": "Max <winfreyu@gmail.com>",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Bunlong/react-xls.git"
+    "url": "git+https://github.com/coinsummer/react-xls.git"
   },
   "bugs": {
-    "url": "https://github.com/Bunlong/react-xls.git/issues"
+    "url": "https://github.com/coinsummer/react-xls.git/issues"
   },
   "keywords": [],
-  "homepage": "https://github.com/Bunlong/react-xls",
+  "homepage": "https://github.com/coinsummer/react-xls",
   "main": "dist/react-xls.js",
   "module": "dist/react-xls.es.js",
   "jsnext:main": "dist/react-xls.es.js",
