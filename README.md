@@ -135,6 +135,7 @@ export default App;
 | type | string | 'link' |  If 'button', render button. | ❌ |
 | style | object | {} | Inline style. | ❌ |
 | className | string | '' | className | ❌ |
+| isRTL | boolean | false | Property that specifies the direction of the sheet | ❌ |
 
 ## 📜 Changelog
 
