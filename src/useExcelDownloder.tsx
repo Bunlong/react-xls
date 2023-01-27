@@ -26,6 +26,7 @@ export interface Props {
   type?: string;
   style?: any;
   className?: string;
+  isRTL?: boolean;
 }
 
 function useExcelDownloderComponent(api: Api) {
@@ -55,8 +56,19 @@ function useExcelDownloderComponent(api: Api) {
 
     const download = () => {
       // Make Workbook of excel
-      const wb = XLSX.utils.book_new();
+      let wb = XLSX.utils.book_new();
 
+      // specifies the direction of the sheet
+      wb = {
+        ...wb,
+        Workbook: {
+          Views: [
+            {
+              RTL: !!props.isRTL
+            }
+          ]
+        }
+      }
       for (const key in data) {
         // Export json to Worksheet of Excel ( only array possible )
         const jsonToSheet = XLSX.utils.json_to_sheet(data[key]);
